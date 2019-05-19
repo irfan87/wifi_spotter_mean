@@ -3,7 +3,7 @@ const homeList = (req, res, next) => {
 }
 
 const locationInfo = (req, res, next) => {
-    res.render('index', {title: 'Location Info'});
+    res.render('location-info', {title: 'Location Info'});
 }
 
 const addReview = (req, res, next) => {
