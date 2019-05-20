@@ -5,6 +5,7 @@ const homeList = (req, res, next) => {
             title: 'Wifi Locator',
             strapLine: 'Find a place to work with wifi'
         },
+        sidebar: "Looking for wifi and a seat? Wifi locator helps you find places to work when out and about. Perhaps with coffee and cake as your company?",
         locations: [{
             name: 'Starcups',
             address: '125 High Street, Reading, RG6 1PS',
