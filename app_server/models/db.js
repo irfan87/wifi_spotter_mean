@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const dbURI = "mongodb://localhost/wifi_locator";
-mongoose.connect(dbURI, {useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB_URI || dbURI, {useNewUrlParser: true});
 
 // Mongoose graceful shutdown
 const gracefulShutDown = (msg, callback) => {
