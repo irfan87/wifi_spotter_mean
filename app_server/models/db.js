@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
-const dbURI = "mongodb://localhost/wifi_locator";
+const dbURI = "mongodb://localhost:27017/wifi_locator";
 mongoose.connect(dbURI, {useNewUrlParser: true});
+
+// required the location model
+require('./locations');
 
 // Mongoose graceful shutdown
 const gracefulShutDown = (msg, callback) => {
