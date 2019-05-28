@@ -1,6 +1,8 @@
 const env = require('dotenv').config();
 
-const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY
+const GM_API_KEY = process.env.GOOGLE_API_KEY
+
+console.log(GM_API_KEY);
 
 // outlet listing that will shown at the main page
 const homeList = (req, res, next) => {
@@ -41,7 +43,7 @@ const locationInfo = (req, res, next) => {
         pageHeader: {
             title: 'Starcups'
         },
-        google_api_key: GOOGLE_API_KEY,
+        google_api_key: GM_API_KEY,
         sidebar: {
             context: 'is on Wifi Locator because it has accessible wifi and space to sit down with your laptop and get some work done.',
             callToAction: 'If you\'ve been and you like it - or if you don\'t - please leave a review to help other people just like you.',
