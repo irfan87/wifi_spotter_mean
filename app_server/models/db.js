@@ -1,5 +1,12 @@
 const mongoose = require('mongoose');
-const dbURI = "mongodb://localhost:27017/wifi_locator";
+let dbURI = "mongodb://127.0.0.1:27017/wifi_locator";
+
+// for production
+if(process.env.NODE_ENV === 'production') {
+    dbURI = "mongodb+srv://wifi_locator_admin:wifi_locator_admin@cluster0-tusks.mongodb.net/wifi_locator";
+    // dbURI = process.env.MLAB_URI;
+}
+
 mongoose.connect(dbURI, {useNewUrlParser: true});
 
 // required the location model
