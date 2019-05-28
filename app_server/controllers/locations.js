@@ -1,8 +1,6 @@
 const env = require('dotenv').config();
 
-const GM_API_KEY = process.env.GOOGLE_API_KEY
-
-console.log(GM_API_KEY);
+const GM_API_KEY = process.env.GOOGLE_API_KEY;
 
 // outlet listing that will shown at the main page
 const homeList = (req, res, next) => {
